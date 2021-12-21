@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.2",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  },
+  "name": "soapbox_server",
+  "version": "1.0.0",
+  "description": "Handling form from soapbox's website",
+  "main": "index.js",
+  "author": "Alo",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node app.ts",
+    "dev": "ts-node-dev app.ts"
+  }
+}
