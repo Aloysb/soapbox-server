@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import { body, oneOf, validationResult, check } from "express-validator";
+import nodemailer from "nodemailer";
 
 const app = express();
 app.use(express.json());
@@ -49,6 +50,7 @@ app.post(
     }
 
     response.json({ message: `All good` });
+    let transporter = nodemailer.createTransport({ service: "gmail" });
   }
 );
 
