@@ -1,7 +1,12 @@
 import express, { Request, Response } from "express";
 import { body, oneOf, validationResult, check } from "express-validator";
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 
+// Import environment variables
+dotenv.config();
+
+// console.log(process.env.GMAIL_USERNAME);
 const app = express();
 app.use(express.json());
 
@@ -50,7 +55,10 @@ app.post(
     }
 
     response.json({ message: `All good` });
-    let transporter = nodemailer.createTransport({ service: "gmail" });
+    // let transporter = nodemailer.createTransport({ service: "gmail" }, auth: {
+    //   user: process.env.GMAIL_USERNAME,
+
+    // });
   }
 );
 
